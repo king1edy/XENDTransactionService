@@ -29,5 +29,34 @@ namespace TemplateDDD.APP.Controllers
             })
             .ToArray();
         }
+
+        [HttpPut]
+        public IActionResult Put(Guid id, [FromBody] WeatherForecast article)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(article.Summary) || article == null)
+                    return BadRequest();
+
+                var response = ""; // _repository.Get(id);
+
+                if (response == null)
+                    return NotFound();
+
+
+                var ob = true;// _repository.Update(article);
+
+                if (ob)
+                    return Ok(ob);
+
+            }
+            catch (Exception ex)
+            {
+                // Log exception here...
+                //_logger.WriteLine(ex.Message);
+            }
+
+            return Ok();
+        }
     }
 }

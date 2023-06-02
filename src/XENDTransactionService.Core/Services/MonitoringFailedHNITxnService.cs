@@ -5,6 +5,7 @@ using TemplateDDD.Data.Dtos.MonitorFailedHNITxn;
 using TemplateDDD.Data.Entities;
 using TemplateDDD.Shared.BaseService;
 using TemplateDDD.Shared.Constants;
+using TemplateDDD.Shared.Repository;
 using TemplateDDD.Shared.Responses;
 using TemplateDDD.Shared.UnitOfWork;
 

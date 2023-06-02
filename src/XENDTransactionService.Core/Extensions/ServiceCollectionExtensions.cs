@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TemplateDDD.Core.Services;
 using TemplateDDD.Core.Services.Interfaces;
+using XENDTransactionService.Core.Services.Interfaces;
+using XENDTransactionService.Core.Services;
 
 namespace TemplateDDD.Core.Extensions
 {
@@ -10,6 +12,8 @@ namespace TemplateDDD.Core.Extensions
         {
             services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<IMonitoringFailedHNITxnService, MonitoringFailedHNITxnService>();
+            // Message service (RabbitMQ)
+            services.AddSingleton<IMessageService, MessageService>();
 
             return services;
         }

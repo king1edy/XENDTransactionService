@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TemplateDDD.Shared\TemplateDDD.Shared.csproj" />
+    <ProjectReference Include="..\XENDTransactionService.Shared\XENDTransactionService.Shared.csproj" />
   </ItemGroup>
 
 </Project>
